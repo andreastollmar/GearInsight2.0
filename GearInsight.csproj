@@ -48,4 +48,9 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <PackageReference Include="ArgentPonyWarcraftClient" Version="7.0.38" />
+	  <PackageReference Include="MongoDB.Driver" Version="2.19.0" />
+	</ItemGroup>
+
 </Project>
