@@ -110,7 +110,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Head")
                     {
                         c.Head.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
 
                         RequestResult<ItemMedia> headMedia = await warcraftClient.GetItemMediaAsync(c.Head.wowheadId, "static-eu");
                         ItemMedia headIcon = headMedia.Value;
@@ -123,7 +123,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Neck")
                     {
                         c.Neck.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> neckMedia = await warcraftClient.GetItemMediaAsync(c.Neck.wowheadId, "static-eu");
                         ItemMedia neckIcon = neckMedia.Value;
                         foreach (var neckUri in neckIcon.Assets)
@@ -135,7 +135,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Shoulders")
                     {
                         c.Shoulder.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> shouldersMedia = await warcraftClient.GetItemMediaAsync(c.Shoulder.wowheadId, "static-eu");
                         ItemMedia shouldersIcon = shouldersMedia.Value;
                         foreach (var shouldersUri in shouldersIcon.Assets)
@@ -148,7 +148,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Shirt")
                     {
                         c.Shirt.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> shirtMedia = await warcraftClient.GetItemMediaAsync(c.Shirt.wowheadId, "static-eu");
                         ItemMedia shirtIcon = shirtMedia.Value;
                         foreach (var shirtUri in shirtIcon.Assets)
@@ -160,7 +160,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Chest")
                     {
                         c.Chest.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> chestMedia = await warcraftClient.GetItemMediaAsync(c.Chest.wowheadId, "static-eu");
                         ItemMedia chestIcon = chestMedia.Value;
                         foreach (var chestUri in chestIcon.Assets)
@@ -173,7 +173,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Waist")
                     {
                         c.Waist.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> waistMedia = await warcraftClient.GetItemMediaAsync(c.Waist.wowheadId, "static-eu");
                         ItemMedia waistIcon = waistMedia.Value;
                         foreach (var waistUri in waistIcon.Assets)
@@ -186,7 +186,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Legs")
                     {
                         c.Legs.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> legsMedia = await warcraftClient.GetItemMediaAsync(c.Legs.wowheadId, "static-eu");
                         ItemMedia legsIcon = legsMedia.Value;
                         foreach (var legsUri in legsIcon.Assets)
@@ -199,7 +199,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Feet")
                     {
                         c.Feet.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> feetMedia = await warcraftClient.GetItemMediaAsync(c.Feet.wowheadId, "static-eu");
                         ItemMedia feetIcon = feetMedia.Value;
                         foreach (var feetUri in feetIcon.Assets)
@@ -211,7 +211,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Wrist")
                     {
                         c.Wrist.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> wristMedia = await warcraftClient.GetItemMediaAsync(c.Wrist.wowheadId, "static-eu");
                         ItemMedia wristIcon = wristMedia.Value;
                         foreach (var wristUri in wristIcon.Assets)
@@ -223,7 +223,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Hands")
                     {
                         c.Hands.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> handsMedia = await warcraftClient.GetItemMediaAsync(c.Hands.wowheadId, "static-eu");
                         ItemMedia handsIcon = handsMedia.Value;
                         foreach (var handsUri in handsIcon.Assets)
@@ -235,7 +235,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Ring 1")
                     {
                         c.Ring1.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> ring1Media = await warcraftClient.GetItemMediaAsync(c.Ring1.wowheadId, "static-eu");
                         ItemMedia ring1Icon = ring1Media.Value;
                         foreach (var ring1Uri in ring1Icon.Assets)
@@ -247,7 +247,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Ring 2")
                     {
                         c.Ring2.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> ring2Media = await warcraftClient.GetItemMediaAsync(c.Ring2.wowheadId, "static-eu");
                         ItemMedia ring2Icon = ring2Media.Value;
                         foreach (var ring2Uri in ring2Icon.Assets)
@@ -283,7 +283,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Back")
                     {
                         c.Back.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> backMedia = await warcraftClient.GetItemMediaAsync(c.Back.wowheadId, "static-eu");
                         ItemMedia backIcon = backMedia.Value;
                         foreach (var backUri in backIcon.Assets)
@@ -295,7 +295,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Main Hand")
                     {
                         c.Mainhand.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> mainhandMedia = await warcraftClient.GetItemMediaAsync(c.Mainhand.wowheadId, "static-eu");
                         ItemMedia mainhandIcon = mainhandMedia.Value;
                         foreach (var mainhandUri in mainhandIcon.Assets)
@@ -307,7 +307,7 @@ namespace GearInsight.Models
                     if (a.EquippedItems[i].Slot.Name == "Off Hand")
                     {
                         c.Offhand.wowheadId = a.EquippedItems[i].Media.Id;
-
+                        
                         RequestResult<ItemMedia> offhandMedia = await warcraftClient.GetItemMediaAsync(c.Offhand.wowheadId, "static-eu");
                         ItemMedia offhandIcon = offhandMedia.Value;
                         foreach (var offhandUri in offhandIcon.Assets)

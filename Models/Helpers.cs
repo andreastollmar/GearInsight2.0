@@ -30,6 +30,11 @@ namespace GearInsight.Models
             }
             return input;
         }
-
+        public static string GetEnchantments(string value)
+        {
+            string enchant = value.Substring(value.IndexOf(" ") + 1, value.IndexOf("|"));
+            enchant = enchant.Substring(0, enchant.IndexOf("|") - 1);
+            return enchant;
+        }
     }
 }
