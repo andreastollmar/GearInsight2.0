@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:GearInsight.Models"
+             x:Class="GearInsight.Views.CharacterPage"
+             Title="CharacterPage">
+
+    <AbsoluteLayout
+        VerticalOptions="FillAndExpand" 
+        HorizontalOptions="FillAndExpand">
+        <Image AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+               Source="{Binding BackgroundImage}"
+               Aspect="AspectFill"/>
+        
+        <Grid ColumnDefinitions="100, *"   
+              RowDefinitions="100, 20, 20, 20, 20, 20, 20, 20"
+              Padding="100">
+
+            <Image Source="{Binding Head.Icon}"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       HeightRequest="100"
+                       WidthRequest="100"
+                       Aspect="Center">
+
+            </Image>
+            
+        </Grid>
+
+
+        <!--<VerticalStackLayout>
+            <Grid ColumnDefinitions="auto, auto">
+                <Grid Grid.Row="0" Grid.Column="0" 
+            RowDefinitions="100, 20, 20, 20, 20, 20, 20, 20"
+                  ColumnDefinitions="*, *"
+                  Padding="100">
+
+                    <Image Source="{Binding Head.Icon}"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       HeightRequest="100"
+                       WidthRequest="100"
+                       Aspect="AspectFit">
+
+                    </Image>
+                </Grid>
+            </Grid>
+        </VerticalStackLayout>-->
+    </AbsoluteLayout>
+</ContentPage>

@@ -14,6 +14,7 @@ namespace GearInsight.Models
         public Guid Id { get; set; }
         public string PlayedClass { get; set; }
         public string ActiveSpec { get; set; }
+        public string BackgroundImage { get; set; }
 
 
         public Head Head { get; set; } = new Head();
@@ -42,10 +43,9 @@ namespace GearInsight.Models
             CharacterName = characterName;
             Realm = realm;
             Id = new Guid();
-
         }
 
-        public static async Task<Character> FetchCharacterAsync(string character, string realm)
+        public static async Task<Character> FetchCharacterAsync(string character, string realm) //ändra till entrys
         {
 
             string token = "EUOWo6xxfXnrvChuWcbTLz7u8OzdYbO7gN";
@@ -59,10 +59,11 @@ namespace GearInsight.Models
             Character c = new Character(character, realm);
             RequestResult<CharacterStatisticsSummary> stats = await warcraftClient.GetCharacterStatisticsSummaryAsync(realm, character, "profile-eu");
             RequestResult<CharacterProfileSummary> profile = await warcraftClient.GetCharacterProfileSummaryAsync(realm, character, "profile-eu");
-
+            RequestResult<CharacterMediaSummary> charMedia = await warcraftClient.GetCharacterMediaSummaryAsync(realm, character, "profile-eu");
 
             c.ActiveSpec = profile.Value.ActiveSpec.Name;
             c.PlayedClass = profile.Value.CharacterClass.Name;
+            c.BackgroundImage = charMedia.Value.Assets[2].Value.AbsoluteUri;
             Console.WriteLine(c.PlayedClass + " " + c.ActiveSpec);
             if (c.PlayedClass == "Warrior" || c.PlayedClass == "Death Knight" || c.ActiveSpec == "Retribution" || c.ActiveSpec == "Protection")
             {
