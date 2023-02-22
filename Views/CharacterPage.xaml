@@ -5,19 +5,36 @@
              x:Class="GearInsight.Views.CharacterPage"
              Title="CharacterPage">
 
-    <AbsoluteLayout
+    <Frame
+           HeightRequest="1000"
+           WidthRequest="1000">
+        <Image Source="{Binding BackgroundImage}"
+               Aspect="AspectFill"
+               HeightRequest="1000"
+               WidthRequest="1000"
+               Margin="10"></Image>
+
+    </Frame>
+    
+    
+    
+    <!--<AbsoluteLayout
         VerticalOptions="FillAndExpand" 
         HorizontalOptions="FillAndExpand">
-        <Image AbsoluteLayout.LayoutFlags="All"
+        --><!--<Image AbsoluteLayout.LayoutFlags="All"
                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
                Source="{Binding BackgroundImage}"
-               Aspect="AspectFill"/>
+               Aspect="AspectFill"/>--><!--
         
-        <Grid ColumnDefinitions="100, *"   
-              RowDefinitions="100, 20, 20, 20, 20, 20, 20, 20"
+        <Grid VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand"
+              ColumnDefinitions="auto, *"   
+              RowDefinitions="auto, 20, 20, 20, 20, 20, 20, 20"
+              
               Padding="100">
 
             <Image Source="{Binding Head.Icon}"
+                   
                        Grid.Column="0"
                        Grid.Row="0"
                        HeightRequest="100"
@@ -26,7 +43,7 @@
 
             </Image>
             
-        </Grid>
+        </Grid>-->
 
 
         <!--<VerticalStackLayout>
@@ -47,5 +64,5 @@
                 </Grid>
             </Grid>
         </VerticalStackLayout>-->
-    </AbsoluteLayout>
+    <!--</AbsoluteLayout>-->
 </ContentPage>
