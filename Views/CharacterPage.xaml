@@ -5,7 +5,7 @@
              x:Class="GearInsight.Views.CharacterPage"
              Title="CharacterPage">
 
-    <Frame
+    <!--<Frame
            HeightRequest="1000"
            WidthRequest="1000">
         <Image Source="{Binding BackgroundImage}"
@@ -14,39 +14,66 @@
                WidthRequest="1000"
                Margin="10"></Image>
 
-    </Frame>
+    </Frame>-->
+
     
     
-    
-    <!--<AbsoluteLayout
+    <AbsoluteLayout
         VerticalOptions="FillAndExpand" 
         HorizontalOptions="FillAndExpand">
-        --><!--<Image AbsoluteLayout.LayoutFlags="All"
+        <Image AbsoluteLayout.LayoutFlags="All"
                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
                Source="{Binding BackgroundImage}"
-               Aspect="AspectFill"/>--><!--
-        
-        <Grid VerticalOptions="FillAndExpand"
-              HorizontalOptions="FillAndExpand"
-              ColumnDefinitions="auto, *"   
-              RowDefinitions="auto, 20, 20, 20, 20, 20, 20, 20"
+               Aspect="AspectFill"/>
+        <VerticalStackLayout>
+            <Grid>
+            <Grid 
+              ColumnDefinitions="50, 50, 50, 10, 100"   
+              RowDefinitions="50, 50, 50, 20, 20, 20, 20, 20"
               
               Padding="100">
 
-            <Image Source="{Binding Head.Icon}"
-                   
+                <Image 
+                    
+                    Source="{Binding Head.Icon}"
+                       x:Name="HeadImage"
                        Grid.Column="0"
-                       Grid.Row="0"
-                       HeightRequest="100"
-                       WidthRequest="100"
-                       Aspect="Center">
-
-            </Image>
-            
-        </Grid>-->
+                       Grid.Row="0"                       
+                       Aspect="AspectFill"
+                       HorizontalOptions="Start">
 
 
-        <!--<VerticalStackLayout>
+                </Image>
+                <Image Source="{Binding Head.Icon}"
+                       x:Name="omm"
+                       Grid.Column="0"
+                       Grid.Row="1"                       
+                       Aspect="AspectFill"
+                       HorizontalOptions="Start">
+
+
+                </Image>
+                <Image Source="{Binding Head.Icon}"
+                       x:Name="om"
+                       Grid.Column="0"
+                       Grid.Row="2"                       
+                       Aspect="AspectFill"
+                       HorizontalOptions="Start">
+
+
+                </Image>
+
+            </Grid>
+
+            </Grid>
+
+
+        </VerticalStackLayout>
+
+    </AbsoluteLayout>
+    
+    
+    <!--<VerticalStackLayout>
             <Grid ColumnDefinitions="auto, auto">
                 <Grid Grid.Row="0" Grid.Column="0" 
             RowDefinitions="100, 20, 20, 20, 20, 20, 20, 20"
@@ -64,5 +91,5 @@
                 </Grid>
             </Grid>
         </VerticalStackLayout>-->
-    <!--</AbsoluteLayout>-->
+    
 </ContentPage>
