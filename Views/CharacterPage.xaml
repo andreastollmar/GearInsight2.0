@@ -5,64 +5,181 @@
              x:Class="GearInsight.Views.CharacterPage"
              Title="CharacterPage">
 
-    <Frame
-           HeightRequest="1000"
-           WidthRequest="1000">
-        <Image Source="{Binding BackgroundImage}"
-               Aspect="AspectFill"
-               HeightRequest="1000"
-               WidthRequest="1000"
-               Margin="10"></Image>
 
-    </Frame>
-    
-    
-    
-    <!--<AbsoluteLayout
-        VerticalOptions="FillAndExpand" 
-        HorizontalOptions="FillAndExpand">
-        --><!--<Image AbsoluteLayout.LayoutFlags="All"
-               AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-               Source="{Binding BackgroundImage}"
-               Aspect="AspectFill"/>--><!--
-        
-        <Grid VerticalOptions="FillAndExpand"
-              HorizontalOptions="FillAndExpand"
-              ColumnDefinitions="auto, *"   
-              RowDefinitions="auto, 20, 20, 20, 20, 20, 20, 20"
-              
-              Padding="100">
+    <FlexLayout Direction="Column">
 
-            <Image Source="{Binding Head.Icon}"
-                   
-                       Grid.Column="0"
-                       Grid.Row="0"
-                       HeightRequest="100"
-                       WidthRequest="100"
-                       Aspect="Center">
+        <Label Text="{Binding CharacterName}" TextColor="Black" FontSize="48" HorizontalTextAlignment="Center" Padding="10"></Label>
+        <FlexLayout FlexLayout.Grow="1" Direction="Row">
 
-            </Image>
-            
-        </Grid>-->
+            <VerticalStackLayout 
+                BackgroundColor="SlateGrey"
+                FlexLayout.Basis="Auto">
+
+                <Grid RowDefinitions="75, 75, 75, 75, 75, 75, 75, 75"
+                      ColumnDefinitions="75, 200"
+                      RowSpacing="20"
+                      Margin="5">
+                    
+                    <!--Head-->
+                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="0">
+                        <Image Source="{Binding Head.Icon}"
+                           Aspect="AspectFit"></Image>
+                    </Border>
+                    <Grid Grid.Column="1" RowDefinitions="*, *" Padding="15" RowSpacing="4">
+
+                        <Label Text="{Binding Head.ItemName}"
+                           Grid.Row="0"
+                           FontSize="16"
+                           FontAttributes="Bold"></Label>
+
+                        <Label Text="Ilvl och enchantments"                         
+                           Grid.Row="1"
+                           FontSize="12"></Label>
+                    </Grid>
+                    
+                    <!--Neck-->
+                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="1">
+                        <Image Source="{Binding Neck.Icon}"
+                           Aspect="AspectFit"></Image>
+                    </Border>
+
+                    <Grid Grid.Column="1" Grid.Row="1" RowDefinitions="auto, auto" Padding="15" RowSpacing="4">
+
+                        <Label Text="{Binding Neck.ItemName}"
+                           Grid.Row="0"
+                           FontSize="16"
+                           FontAttributes="Bold"></Label>
+
+                        <Label Text="Ilvl och enchantments"                         
+                           Grid.Row="1"
+                           FontSize="12"></Label>
+                    </Grid>
+                    
+                    <!--Shoulder-->
+                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="2">
+                        <Image Source="{Binding Shoulder.Icon}"
+                           Aspect="AspectFit"></Image>
+                    </Border>
+                    
+                    <Grid Grid.Column="1" Grid.Row="2" RowDefinitions="auto, auto" Padding="15" RowSpacing="4">
+
+                        <Label Text="{Binding Shoulder.ItemName}"
+                           Grid.Row="0"
+                           FontSize="16"
+                           FontAttributes="Bold"></Label>
+
+                        <Label Text="Ilvl och enchantments"                         
+                           Grid.Row="1"
+                           FontSize="12"></Label>
+                    </Grid>
+
+                    <!--Back-->
+                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="3">
+                        <Image Source="{Binding Back.Icon}"
+                           Aspect="AspectFit"></Image>
+                    </Border>
+
+                    <Grid Grid.Column="1" Grid.Row="3" RowDefinitions="auto, auto" Padding="15" RowSpacing="4">
+
+                        <Label Text="{Binding Back.ItemName}"
+                           Grid.Row="0"
+                           FontSize="16"
+                           FontAttributes="Bold"></Label>
+
+                        <Label Text="Ilvl och enchantments"                         
+                           Grid.Row="1"
+                           FontSize="12"></Label>
+                    </Grid>
+
+                    <!--Chest-->
+                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="4">
+                        <Image Source="{Binding Chest.Icon}"
+                           Aspect="AspectFit"></Image>
+                    </Border>
+
+                    <Grid Grid.Column="1" Grid.Row="4" RowDefinitions="auto, auto" Padding="15" RowSpacing="4">
+
+                        <Label Text="{Binding Chest.ItemName}"
+                           Grid.Row="0"
+                           FontSize="16"
+                           FontAttributes="Bold"></Label>
+
+                        <Label Text="Ilvl och enchantments"                         
+                           Grid.Row="1"
+                           FontSize="12"></Label>
+                    </Grid>
+
+                    <!--Shirt-->
+                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="5">
+                        <Image Source="{Binding Shirt.Icon}"
+                           Aspect="AspectFit"></Image>
+                    </Border>
+
+                    <Grid Grid.Column="1" Grid.Row="5" RowDefinitions="auto, auto" Padding="15" RowSpacing="4">
+
+                        <Label Text="{Binding Shirt.ItemName}"
+                           Grid.Row="0"
+                           FontSize="16"
+                           FontAttributes="Bold"></Label>
+
+                        <Label Text="Ilvl och enchantments"                         
+                           Grid.Row="1"
+                           FontSize="12"></Label>
+                    </Grid>
+
+                    <!--Tabard-->
+                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="6">
+                        <Image Source="{Binding Tabard.Icon}"
+                           Aspect="AspectFit"></Image>
+                    </Border>
+
+                    <Grid Grid.Column="1" Grid.Row="6" RowDefinitions="auto, auto" Padding="15" RowSpacing="4">
+
+                        <Label Text="{Binding Tabard.ItemName}"
+                           Grid.Row="0"
+                           FontSize="16"
+                           FontAttributes="Bold"></Label>
+
+                        <Label Text="Ilvl och enchantments"                         
+                           Grid.Row="1"
+                           FontSize="12"></Label>
+                    </Grid>
+
+                    <!--Wrist-->
+                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="7">
+                        <Image Source="{Binding Wrist.Icon}"
+                           Aspect="AspectFit"></Image>
+                    </Border>
+
+                    <Grid Grid.Column="1" Grid.Row="7" RowDefinitions="auto, auto" Padding="15" RowSpacing="4">
+
+                        <Label Text="{Binding Wrist.ItemName}"
+                           Grid.Row="0"
+                           FontSize="16"
+                           FontAttributes="Bold"></Label>
+
+                        <Label Text="Ilvl och enchantments"                         
+                           Grid.Row="1"
+                           FontSize="12"></Label>
+                    </Grid>
 
 
-        <!--<VerticalStackLayout>
-            <Grid ColumnDefinitions="auto, auto">
-                <Grid Grid.Row="0" Grid.Column="0" 
-            RowDefinitions="100, 20, 20, 20, 20, 20, 20, 20"
-                  ColumnDefinitions="*, *"
-                  Padding="100">
 
-                    <Image Source="{Binding Head.Icon}"
-                       Grid.Column="0"
-                       Grid.Row="0"
-                       HeightRequest="100"
-                       WidthRequest="100"
-                       Aspect="AspectFit">
-
-                    </Image>
                 </Grid>
-            </Grid>
-        </VerticalStackLayout>-->
-    <!--</AbsoluteLayout>-->
+
+
+            </VerticalStackLayout>
+
+            <VerticalStackLayout FlexLayout.Grow="1">
+                <Image Grid.Column="1" Source="dunndeal.png" HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="500" WidthRequest="1500"></Image>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout 
+                BackgroundColor="SlateGrey"
+                FlexLayout.Basis="400">
+            </VerticalStackLayout>
+
+        </FlexLayout>
+        <Label BackgroundColor="Transparent"></Label>
+    </FlexLayout>
 </ContentPage>
