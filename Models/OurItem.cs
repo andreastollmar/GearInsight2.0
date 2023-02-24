@@ -18,6 +18,7 @@ namespace GearInsight.Models
         public Head()
         {
             Icon = "emptyhead.png";
+            ItemName = "Head";
         }
     }
     public class Neck : OurItem
@@ -25,6 +26,7 @@ namespace GearInsight.Models
         public Neck()
         {
             Icon = "emptyneck.png";
+            ItemName = "Neck";
         }
     }
     public class Shoulder : OurItem
@@ -32,6 +34,7 @@ namespace GearInsight.Models
         public Shoulder()
         {
             Icon = "emptyshoulder.png";
+            ItemName = "Shoulder";
         }
     }
     public class Chest : OurItem
@@ -39,6 +42,7 @@ namespace GearInsight.Models
         public Chest()
         {
             Icon = "emptychest.png";
+            ItemName = "Chest";
         }
     }
     public class Waist : OurItem
@@ -46,6 +50,7 @@ namespace GearInsight.Models
         public Waist()
         {
             Icon = "emptywaist.png";
+            ItemName = "Waist";
         }
     }
     public class Legs : OurItem
@@ -53,6 +58,7 @@ namespace GearInsight.Models
         public Legs()
         {
             Icon = "emptylegs.png";
+            ItemName = "Legs";
         }
     }
     public class Feet : OurItem
@@ -60,6 +66,7 @@ namespace GearInsight.Models
         public Feet()
         {
             Icon = "emptyfeet.png";
+            ItemName = "Feet";
         }
     }
     public class Wrist : OurItem
@@ -67,6 +74,7 @@ namespace GearInsight.Models
         public Wrist()
         {
             Icon = "emptywrist.png";
+            ItemName = "Wrist";
         }
     }
     public class Hands : OurItem
@@ -74,6 +82,7 @@ namespace GearInsight.Models
         public Hands()
         {
             Icon = "emptyhands.png";
+            ItemName = "Hands";
         }
     }
     public class Ring1 : OurItem
@@ -81,6 +90,7 @@ namespace GearInsight.Models
         public Ring1()
         {
             Icon = "emptyring.png";
+            ItemName = "Ring";
         }
     }
     public class Ring2 : OurItem
@@ -88,6 +98,7 @@ namespace GearInsight.Models
         public Ring2()
         {
             Icon = "emptyring.png";
+            ItemName = "Ring";
         }
     }
     public class Trinket1 : OurItem
@@ -95,6 +106,7 @@ namespace GearInsight.Models
         public Trinket1()
         {
             Icon = "emptytrinket.png";
+            ItemName = "Trinket";
         }
     }
     public class Trinket2 : OurItem
@@ -102,6 +114,7 @@ namespace GearInsight.Models
         public Trinket2()
         {
             Icon = "emptytrinket.png";
+            ItemName = "Trinket";
         }
     }
     public class Back : OurItem
@@ -109,6 +122,7 @@ namespace GearInsight.Models
         public Back()
         {
             Icon = "emptyback.png";
+            ItemName = "Back";
         }
     }
     public class Mainhand : OurItem
@@ -116,6 +130,7 @@ namespace GearInsight.Models
         public Mainhand()
         {
             Icon = "emptymainhand.png";
+            ItemName = "Mainhand";
         }
     }
     public class Offhand : OurItem
@@ -123,6 +138,7 @@ namespace GearInsight.Models
         public Offhand()
         {
             Icon = "emptyoffhand.png";
+            ItemName = "Offhand";
         }
     }
     public class Tabard : OurItem
@@ -130,6 +146,7 @@ namespace GearInsight.Models
         public Tabard()
         {
             Icon = "emptytabard.png";
+            ItemName = "Tabard";
         }
     }
     public class Shirt : OurItem
@@ -137,6 +154,7 @@ namespace GearInsight.Models
         public Shirt()
         {
             Icon = "emptyshirt.png";
+            ItemName = "Shirt";
         }
     }
 }
