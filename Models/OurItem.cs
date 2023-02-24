@@ -121,7 +121,7 @@ namespace GearInsight.Models
     {
         public Back()
         {
-            Icon = "emptyback.png";
+            Icon = "emptychest.png";
             ItemName = "Back";
         }
     }

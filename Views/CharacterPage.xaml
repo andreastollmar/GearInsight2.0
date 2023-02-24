@@ -11,167 +11,170 @@
 
         <Label Text="{Binding CharacterName}" TextColor="Purple" FontSize="48" HorizontalTextAlignment="Center" Padding="10"></Label>
         <FlexLayout FlexLayout.Grow="1" Direction="Row">
-            <Grid ColumnDefinitions="*, 2*, *">
-            <VerticalStackLayout Grid.Column="0"
-                BackgroundColor="SlateGrey">
-                <!--.Basis="350"-->
+            <Grid ColumnDefinitions="200, *, *, *, 200">
+                <VerticalStackLayout Grid.Column="1"
+                BackgroundColor="SlateGrey"
+                >
+                    
 
-                <Grid RowDefinitions="75, 75, 75, 75, 75, 75, 75, 75"
-                      ColumnDefinitions="75, 350"
+                    <Grid RowDefinitions=".125*, .125*, .125*, .125*, .125*, .125*, .125*, .125*"
+                      ColumnDefinitions="75, *"
                       RowSpacing="20"
                       Margin="5">
-                    
-                    <!--Head-->
-                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="0">
-                        <Image Source="{Binding Head.Icon}"
-                           Aspect="AspectFit"></Image>
-                    </Border>
-                    <Grid Grid.Column="1" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
-                        <Label Text="{Binding Head.ItemName}"
+                        <!--Head-->
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="0" Grid.Column="0">
+                            <Image Source="{Binding Head.Icon}"
+                           Aspect="AspectFit" ></Image>
+                        </Border>
+                        <Grid Grid.Column="1" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+
+                            <Label Text="{Binding Head.ItemName}"
+                           Grid.Row="0"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                               HorizontalOptions="Start"></Label>
+
+                            <Label Text="Ilvl och enchantments"                         
+                           Grid.Row="1"
+                           FontSize="12"
+                           HorizontalOptions="Start"></Label>
+                        </Grid>
+
+                        <!--Neck-->
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="1" Grid.Column="0">
+                            <Image Source="{Binding Neck.Icon}"
+                           Aspect="AspectFit"></Image>
+                        </Border>
+
+                        <Grid Grid.Column="1" Grid.Row="1" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+
+                            <Label Text="{Binding Neck.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
                            FontAttributes="Bold"></Label>
 
-                        <Label Text="Ilvl och enchantments"                         
+                            <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
                            FontSize="12"></Label>
-                    </Grid>
-                    
-                    <!--Neck-->
-                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="1">
-                        <Image Source="{Binding Neck.Icon}"
+                        </Grid>
+
+                        <!--Shoulder-->
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="2" Grid.Column="0">
+                            <Image Source="{Binding Shoulder.Icon}"
                            Aspect="AspectFit"></Image>
-                    </Border>
+                        </Border>
 
-                    <Grid Grid.Column="1" Grid.Row="1" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="1" Grid.Row="2" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
-                        <Label Text="{Binding Neck.ItemName}"
+                            <Label Text="{Binding Shoulder.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
                            FontAttributes="Bold"></Label>
 
-                        <Label Text="Ilvl och enchantments"                         
+                            <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
                            FontSize="12"></Label>
-                    </Grid>
-                    
-                    <!--Shoulder-->
-                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="2">
-                        <Image Source="{Binding Shoulder.Icon}"
-                           Aspect="AspectFit"></Image>
-                    </Border>
-                    
-                    <Grid Grid.Column="1" Grid.Row="2" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        </Grid>
 
-                        <Label Text="{Binding Shoulder.ItemName}"
+                        <!--Back-->
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="3" Grid.Column="0">
+                            <Image Source="{Binding Back.Icon}"
+                           Aspect="AspectFit"></Image>
+                        </Border>
+
+                        <Grid Grid.Column="1" Grid.Row="3" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+
+                            <Label Text="{Binding Back.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
                            FontAttributes="Bold"></Label>
 
-                        <Label Text="Ilvl och enchantments"                         
+                            <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
                            FontSize="12"></Label>
-                    </Grid>
+                        </Grid>
 
-                    <!--Back-->
-                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="3">
-                        <Image Source="{Binding Back.Icon}"
+                        <!--Chest-->
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="4" Grid.Column="0">
+                            <Image Source="{Binding Chest.Icon}"
                            Aspect="AspectFit"></Image>
-                    </Border>
+                        </Border>
 
-                    <Grid Grid.Column="1" Grid.Row="3" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="1" Grid.Row="4" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
-                        <Label Text="{Binding Back.ItemName}"
+                            <Label Text="{Binding Chest.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
                            FontAttributes="Bold"></Label>
 
-                        <Label Text="Ilvl och enchantments"                         
+                            <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
                            FontSize="12"></Label>
-                    </Grid>
+                        </Grid>
 
-                    <!--Chest-->
-                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="4">
-                        <Image Source="{Binding Chest.Icon}"
+                        <!--Shirt-->
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="5" Grid.Column="0">
+                            <Image Source="{Binding Shirt.Icon}"
                            Aspect="AspectFit"></Image>
-                    </Border>
+                        </Border>
 
-                    <Grid Grid.Column="1" Grid.Row="4" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="1" Grid.Row="5" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
-                        <Label Text="{Binding Chest.ItemName}"
+                            <Label Text="{Binding Shirt.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
                            FontAttributes="Bold"></Label>
 
-                        <Label Text="Ilvl och enchantments"                         
+                            <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
                            FontSize="12"></Label>
-                    </Grid>
+                        </Grid>
 
-                    <!--Shirt-->
-                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="5">
-                        <Image Source="{Binding Shirt.Icon}"
+                        <!--Tabard-->
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="6" Grid.Column="0">
+                            <Image Source="{Binding Tabard.Icon}"
                            Aspect="AspectFit"></Image>
-                    </Border>
+                        </Border>
 
-                    <Grid Grid.Column="1" Grid.Row="5" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="1" Grid.Row="6" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
-                        <Label Text="{Binding Shirt.ItemName}"
+                            <Label Text="{Binding Tabard.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
                            FontAttributes="Bold"></Label>
 
-                        <Label Text="Ilvl och enchantments"                         
+                            <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
                            FontSize="12"></Label>
-                    </Grid>
+                        </Grid>
 
-                    <!--Tabard-->
-                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="6">
-                        <Image Source="{Binding Tabard.Icon}"
+                        <!--Wrist-->
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="7" Grid.Column="0">
+                            <Image Source="{Binding Wrist.Icon}"
                            Aspect="AspectFit"></Image>
-                    </Border>
+                        </Border>
 
-                    <Grid Grid.Column="1" Grid.Row="6" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="1" Grid.Row="7" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
-                        <Label Text="{Binding Tabard.ItemName}"
+                            <Label Text="{Binding Wrist.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
                            FontAttributes="Bold"></Label>
 
-                        <Label Text="Ilvl och enchantments"                         
+                            <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
                            FontSize="12"></Label>
-                    </Grid>
+                        </Grid>
 
-                    <!--Wrist-->
-                    <Border StrokeThickness="2" Stroke="Purple" Grid.Row="7">
-                        <Image Source="{Binding Wrist.Icon}"
-                           Aspect="AspectFit"></Image>
-                    </Border>
 
-                    <Grid Grid.Column="1" Grid.Row="7" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
-                        <Label Text="{Binding Wrist.ItemName}"
-                           Grid.Row="0"
-                           FontSize="16"
-                           FontAttributes="Bold"></Label>
-
-                        <Label Text="Ilvl och enchantments"                         
-                           Grid.Row="1"
-                           FontSize="12"></Label>
                     </Grid>
 
 
+                </VerticalStackLayout>
 
-                </Grid>
-
-            
-            </VerticalStackLayout>
-            
-            <VerticalStackLayout FlexLayout.Grow="1" Grid.Column="1">
+                <VerticalStackLayout FlexLayout.Grow="1" Grid.Column="2">
                     <Grid ColumnDefinitions="75, *, 75"
                           RowDefinitions="75, 75, 75, 75, 75, 75, 75, 75, 75"
                           RowSpacing="20"
@@ -181,195 +184,210 @@
                             <Image Source="{Binding Mainhand.Icon}"
                            Aspect="AspectFit"></Image>
                         </Border>
-                        
+
                         <!--OffHand-->
                         <Border StrokeThickness="2" Stroke="Purple" Grid.Row="8" Grid.Column="2">
                             <Image Source="{Binding Offhand.Icon}"
                            Aspect="AspectFit"></Image>
                         </Border>
-                        <Grid Grid.Column="1" Grid.Row="8" ColumnDefinitions="*, *"> 
-                        <Grid Grid.Row="0" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="1" Grid.Row="8" ColumnDefinitions="*, *">
+                            <Grid Grid.Row="0" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
-                            <Label Text="{Binding Mainhand.ItemName}"
+                                <Label Text="{Binding Mainhand.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
                            FontAttributes="Bold"></Label>
 
-                            <Label Text="Ilvl och enchantments"                         
+                                <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
                            FontSize="12"></Label>
-                        </Grid>
-                        
-                        
+                            </Grid>
 
-                        <Grid Grid.Column="2"  RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
-                            <Label Text="{Binding Offhand.ItemName}"
+
+                            <Grid Grid.Column="2"  RowDefinitions="*, *" Padding="10" RowSpacing="4">
+
+                                <Label Text="{Binding Offhand.ItemName}"
                                    HorizontalOptions="End"
                            Grid.Row="0"
                            FontSize="16"
                            FontAttributes="Bold"></Label>
 
-                            <Label Text="Ilvl och enchantments" 
+                                <Label Text="Ilvl och enchantments" 
                                    HorizontalOptions="End"
                            Grid.Row="1"
                            FontSize="12"></Label>
+                            </Grid>
                         </Grid>
-                        </Grid>
-                        <Image Source="dunndeal.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="1000" WidthRequest="1500" Grid.ColumnSpan="3" Grid.RowSpan="8"></Image>
+                        <Image Source="{Binding BackgroundImage}" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="800" WidthRequest="1500" Grid.ColumnSpan="3" Grid.RowSpan="8"></Image>
                     </Grid>
                 </VerticalStackLayout>
 
-            <VerticalStackLayout Grid.Column="2"
-                BackgroundColor="SlateGrey"
-                FlexLayout.Basis="400">
+                <VerticalStackLayout Grid.Column="3" HorizontalOptions="End"
+                BackgroundColor="SlateGrey">
 
                     <Grid RowDefinitions="75, 75, 75, 75, 75, 75, 75, 75"
-                      ColumnDefinitions="75, 300"
+                      ColumnDefinitions="*, 75"
                       RowSpacing="20"
                       Margin="5">
 
                         <!--Hands-->
-                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="0">
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Column="1">
                             <Image Source="{Binding Hands.Icon}"
                            Aspect="AspectFit"></Image>
                         </Border>
-                        <Grid Grid.Column="1" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="0" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
                             <Label Text="{Binding Hands.ItemName}"
                            Grid.Row="0"
-                           FontSize="16"
+                           FontSize="16"                                  
+                           HorizontalOptions="End"
                            FontAttributes="Bold"></Label>
 
                             <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
+                           HorizontalOptions="End"
                            FontSize="12"></Label>
                         </Grid>
 
                         <!--Waist-->
-                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="1">
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="1" Grid.Column="1">
                             <Image Source="{Binding Waist.Icon}"
                            Aspect="AspectFit"></Image>
                         </Border>
 
-                        <Grid Grid.Column="1" Grid.Row="1" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="0" Grid.Row="1" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
                             <Label Text="{Binding Waist.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
+                           HorizontalOptions="End"
                            FontAttributes="Bold"></Label>
 
                             <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
+                           HorizontalOptions="End"
                            FontSize="12"></Label>
                         </Grid>
 
                         <!--Legs-->
-                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="2">
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="2" Grid.Column="1">
                             <Image Source="{Binding Legs.Icon}"
                            Aspect="AspectFit"></Image>
                         </Border>
 
-                        <Grid Grid.Column="1" Grid.Row="2" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="0" Grid.Row="2" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
                             <Label Text="{Binding Legs.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
+                           HorizontalOptions="End"
                            FontAttributes="Bold"></Label>
 
                             <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
+                           HorizontalOptions="End"
                            FontSize="12"></Label>
                         </Grid>
 
                         <!--Feet-->
-                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="3">
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="3" Grid.Column="1">
                             <Image Source="{Binding Feet.Icon}"
                            Aspect="AspectFit"></Image>
                         </Border>
 
-                        <Grid Grid.Column="1" Grid.Row="3" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="0" Grid.Row="3" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
                             <Label Text="{Binding Feet.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
+                           HorizontalOptions="End"
                            FontAttributes="Bold"></Label>
 
                             <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
+                           HorizontalOptions="End"
                            FontSize="12"></Label>
                         </Grid>
 
                         <!--Ring1-->
-                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="4">
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="4" Grid.Column="1">
                             <Image Source="{Binding Ring1.Icon}"
                            Aspect="AspectFit"></Image>
                         </Border>
 
-                        <Grid Grid.Column="1" Grid.Row="4" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="0" Grid.Row="4" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
                             <Label Text="{Binding Ring1.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
+                           HorizontalOptions="End"
                            FontAttributes="Bold"></Label>
 
                             <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
+                           HorizontalOptions="End"
                            FontSize="12"></Label>
                         </Grid>
 
                         <!--Ring2-->
-                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="5">
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="5" Grid.Column="1">
                             <Image Source="{Binding Ring2.Icon}"
                            Aspect="AspectFit"></Image>
                         </Border>
 
-                        <Grid Grid.Column="1" Grid.Row="5" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="0" Grid.Row="5" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
                             <Label Text="{Binding Ring2.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
+                           HorizontalOptions="End"
                            FontAttributes="Bold"></Label>
 
                             <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
+                           HorizontalOptions="End"
                            FontSize="12"></Label>
                         </Grid>
 
                         <!--Trinket1-->
-                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="6">
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="6" Grid.Column="1">
                             <Image Source="{Binding Trinket1.Icon}"
                            Aspect="AspectFit"></Image>
                         </Border>
 
-                        <Grid Grid.Column="1" Grid.Row="6" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="0" Grid.Row="6" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
                             <Label Text="{Binding Trinket1.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
+                           HorizontalOptions="End"
                            FontAttributes="Bold"></Label>
 
                             <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
-                           FontSize="12"></Label>
+                           FontSize="12"
+                           HorizontalOptions="End"></Label>
                         </Grid>
 
                         <!--Trinket2-->
-                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="7">
+                        <Border StrokeThickness="2" Stroke="Purple" Grid.Row="7" Grid.Column="1">
                             <Image Source="{Binding Trinket2.Icon}"
                            Aspect="AspectFit"></Image>
                         </Border>
 
-                        <Grid Grid.Column="1" Grid.Row="7" RowDefinitions="*, *" Padding="10" RowSpacing="4">
+                        <Grid Grid.Column="0" Grid.Row="7" RowDefinitions="*, *" Padding="10" RowSpacing="4">
 
                             <Label Text="{Binding Trinket2.ItemName}"
                            Grid.Row="0"
                            FontSize="16"
-                           FontAttributes="Bold"></Label>
+                           FontAttributes="Bold"
+                           HorizontalOptions="End"></Label>
 
                             <Label Text="Ilvl och enchantments"                         
                            Grid.Row="1"
-                           FontSize="12"></Label>
+                           FontSize="12"
+                           HorizontalOptions="End"></Label>
                         </Grid>
 
 

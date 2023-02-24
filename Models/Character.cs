@@ -63,7 +63,7 @@ namespace GearInsight.Models
 
             c.ActiveSpec = profile.Value.ActiveSpec.Name;
             c.PlayedClass = profile.Value.CharacterClass.Name;
-            c.BackgroundImage = charMedia.Value.Assets[2].Value.AbsoluteUri;
+            c.BackgroundImage = charMedia.Value.Assets[3].Value.AbsoluteUri;
             Console.WriteLine(c.PlayedClass + " " + c.ActiveSpec);
             if (c.PlayedClass == "Warrior" || c.PlayedClass == "Death Knight" || c.ActiveSpec == "Retribution" || c.ActiveSpec == "Protection")
             {
