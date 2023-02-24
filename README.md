@@ -16,3 +16,11 @@
         // Refresh "knapp"
         // Task<Character> refresh = Mongo.RefreshData(character, realm);
         // await refresh;
+
+        Lägga till bild nr 3 istället för 2 för character image (BackgroundImage)
+
+        hitta backgrund för alla classer? eller ska vi ta en fast background? 
+
+        la till grids för allt typ för att visa characters, vävde in allt så att det går att flytta på etc
+
+        bestämma om vi vill ha itemsen mot mitten eller mot kanterna (byta på ena griden)
