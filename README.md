@@ -24,3 +24,5 @@
         la till grids för allt typ för att visa characters, vävde in allt så att det går att flytta på etc
 
         bestämma om vi vill ha itemsen mot mitten eller mot kanterna (byta på ena griden)
+
+        itemlvl får vi ut från profile callet value.avgitemlvl
