@@ -13,7 +13,7 @@
 
             <VerticalStackLayout 
                 BackgroundColor="SlateGrey"
-                FlexLayout.Basis="Auto">
+                FlexLayout.Basis="350">
 
                 <Grid RowDefinitions="75, 75, 75, 75, 75, 75, 75, 75"
                       ColumnDefinitions="75, 200"

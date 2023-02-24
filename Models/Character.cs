@@ -48,7 +48,7 @@ namespace GearInsight.Models
         public static async Task<Character> FetchCharacterAsync(string character, string realm) //ändra till entrys
         {
 
-            string token = "EUOWo6xxfXnrvChuWcbTLz7u8OzdYbO7gN";
+            //string token = "EUOWo6xxfXnrvChuWcbTLz7u8OzdYbO7gN";
             string clientId = "c2409be1a9e2473890d079632a06a265";
             string clientSecret = "XDO1WbK2BJ36OfLyo90nYVnUyGj5yHNd";
 
