@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace GearInsight.Models
@@ -36,5 +37,50 @@ namespace GearInsight.Models
             enchant = enchant.Substring(0, enchant.IndexOf("|") - 1);
             return enchant;
         }
+
+        public static string ExtractValue(string input)
+        {
+            string pattern = @"\bValue\s*=\s*(\d+)\b";
+            Regex regex = new Regex(pattern);
+            Match match = regex.Match(input);
+            if (match.Success)
+            {
+                return match.Groups[1].Value;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public static int ExtractRatingFromStats(string input)
+        {
+            string pattern = @"\bRating\s*=\s*(\d+)";
+            Regex regex = new Regex(pattern);
+            Match match = regex.Match(input);
+            if (match.Success)
+            {
+                return int.Parse(match.Groups[1].Value);
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public static double? ExtractPercentFromStats(string input)
+        {
+            string pattern = @"\bValue\s*=\s*(\d+(?:,\d{3})*(?:\.\d+)?)";
+            Regex regex = new Regex(pattern);
+            Match match = regex.Match(input);
+            if (match.Success)
+            {
+                return double.Parse(match.Groups[1].Value); //.Replace(",", "")
+            }
+            else
+            {
+                return null;
+            }
+        }
+
     }
 }
