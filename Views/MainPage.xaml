@@ -15,12 +15,16 @@
             
             <Entry x:Name="Realm"
                    Placeholder="Skriv din server"
+                   
                    HorizontalOptions="Center" ></Entry>
 
             <Button
                 x:Name="FindCharacter"
                 Text="Click me"
+                
+                
                 Clicked="FindCharacter_Clicked"
+                
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>
