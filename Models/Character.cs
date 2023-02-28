@@ -52,7 +52,7 @@ namespace GearInsight.Models
         public Stats MeleeCrit { get; set; } = new Stats();
         public Stats RangeCrit { get; set; } = new Stats();
         public Stats Mastery { get; set; } = new Stats();
-        //public Stats Power { get; set; } = new Stats();
+        public Stats Power { get; set; } = new Stats();
         public string Health { get; set; }
         public string Versatility { get; set; }
 
@@ -80,7 +80,7 @@ namespace GearInsight.Models
             RequestResult<CharacterStatisticsSummary> stats = await warcraftClient.GetCharacterStatisticsSummaryAsync(realm, character, "profile-eu");
             RequestResult<CharacterProfileSummary> profile = await warcraftClient.GetCharacterProfileSummaryAsync(realm, character, "profile-eu");
             RequestResult<CharacterMediaSummary> charMedia = await warcraftClient.GetCharacterMediaSummaryAsync(realm, character, "profile-eu");
-            RequestResult<CharacterMythicKeystoneSeasonDetails> mythic = await warcraftClient.GetCharacterMythicKeystoneSeasonDetailsAsync(realm, character, 1, "dynamic-eu");
+            RequestResult<CharacterMythicKeystoneSeasonDetails> mythic = await warcraftClient.GetCharacterMythicKeystoneSeasonDetailsAsync(realm, character, 1, "profile-eu");
 
             c.AchievementPoints = profile.Value.AchievementPoints;
             c.AvgIlvl = profile.Value.AverageItemLevel;
@@ -90,16 +90,15 @@ namespace GearInsight.Models
             c.ActiveSpec = profile.Value.ActiveSpec.Name;
             c.PlayedClass = profile.Value.CharacterClass.Name;
             c.BackgroundImage = charMedia.Value.Assets[3].Value.AbsoluteUri;
-            //c.MPlusRating = mythic.Value.BestRuns.ToString();
+            c.Power.Rating = stats.Value.Power;            
 
 
 
             if (stats.Success)
             {
                 if (c.PlayedClass == "Warrior" || c.PlayedClass == "Death Knight" || c.ActiveSpec == "Retribution" || c.ActiveSpec == "Protection")
-                {
-                    c.Strength.Rating = Helpers.ExtractRatingFromStats(stats.Value.Strength.ToString());
-                    c.Strength.Percent = Helpers.ExtractPercentFromStats(stats.Value.Strength.ToString());
+                {                    
+                    c.Strength.Rating = stats.Value.Strength.Effective;
 
                     c.MeleeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeCrit.ToString());
                     c.MeleeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeCrit.ToString());
@@ -109,8 +108,7 @@ namespace GearInsight.Models
                 }
                 else if (c.PlayedClass == "Rogue" || c.PlayedClass == "Demon Hunter" || (c.PlayedClass == "Hunter" && c.ActiveSpec == "Survival") || c.ActiveSpec == "Windwalker" || c.ActiveSpec == "Brewmaster" || c.ActiveSpec == "Enhancement" || c.ActiveSpec == "Feral" || c.ActiveSpec == "Guardian")
                 {
-                    c.Agility.Rating = Helpers.ExtractRatingFromStats(stats.Value.Agility.ToString());
-                    c.Agility.Percent = Helpers.ExtractPercentFromStats(stats.Value.Agility.ToString());
+                    c.Agility.Rating = stats.Value.Agility.Effective;
 
                     c.MeleeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeCrit.ToString());
                     c.MeleeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeCrit.ToString());
@@ -120,8 +118,7 @@ namespace GearInsight.Models
                 }
                 else if (c.PlayedClass == "Hunter")
                 {
-                    c.Agility.Rating = Helpers.ExtractRatingFromStats(stats.Value.Agility.ToString());
-                    c.Agility.Percent = Helpers.ExtractPercentFromStats(stats.Value.Agility.ToString());
+                    c.Agility.Rating = stats.Value.Agility.Effective;
 
                     c.RangeHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.RangedHaste.ToString());
                     c.RangeHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.RangedHaste.ToString());
@@ -133,8 +130,7 @@ namespace GearInsight.Models
                 else if (c.PlayedClass == "Mage" || c.PlayedClass == "Warlock" || c.PlayedClass == "Priest" || c.PlayedClass == "Evoker" || c.ActiveSpec == "Mistweaver" || c.PlayedClass == "Shaman" || c.ActiveSpec == "Balance" || c.ActiveSpec == "Restoration" || c.ActiveSpec == "Holy")
                 {
 
-                    c.Intellect.Rating = Helpers.ExtractRatingFromStats(stats.Value.Intellect.ToString());
-                    c.Intellect.Percent = Helpers.ExtractPercentFromStats(stats.Value.Intellect.ToString());
+                    c.Intellect.Rating = stats.Value.Intellect.Effective;
 
                     c.SpellHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.SpellHaste.ToString());
                     c.SpellHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.SpellHaste.ToString());

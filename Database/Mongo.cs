@@ -98,6 +98,8 @@ namespace GearInsight.Database
 
             Task deleteCharacter = DeleteOneCharacter(await allCharacters, await id);
 
+            await deleteCharacter;
+
             Task<Character> createdCharacter = CreateAfterDelete(name, realm, await allCharacters);
 
             return await createdCharacter;
@@ -105,15 +107,13 @@ namespace GearInsight.Database
 
         public static async Task DeleteOneCharacter(IMongoCollection<Character> myCollection, Guid id)
         {
-            var character = await myCollection.DeleteOneAsync(x => x.Id == id);
-            Console.WriteLine("Character deleted!"); // ta bort sen
+            var character = await myCollection.DeleteOneAsync(x => x.Id == id);            
         }
 
         public static async Task<Character> CreateAfterDelete(string name, string realm, IMongoCollection<Character> allCharacters)
         {
             Character character = await Character.FetchCharacterAsync(name, realm);
-            await allCharacters.InsertOneAsync(character);
-            Console.WriteLine("Character created, saved and fetched AFTRER delete"); // ta bort sen
+            await allCharacters.InsertOneAsync(character);            
             return character;
         }
     }
