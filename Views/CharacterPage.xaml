@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:model="clr-namespace:GearInsight.Models"
+             xmlns:model="clr-namespace:GearInsight.Models"            
              x:Class="GearInsight.Views.CharacterPage"
              Title="CharacterPage"             
              BackgroundImageSource="warrior.jpg">
@@ -12,6 +12,12 @@
         <Label Text="{Binding CharacterName}" TextColor="Purple" FontSize="48" HorizontalTextAlignment="Center" Padding="10"></Label>
         <FlexLayout FlexLayout.Grow="1" Direction="Row">
             <Grid ColumnDefinitions="200, *, 2*, *, 200">
+                <Grid ColumnDefinitions="*,*" RowDefinitions="*, *, *, *, *">
+                
+                    
+
+                    
+                </Grid>
                 
                 <VerticalStackLayout Grid.Column="1"
                                      
@@ -26,13 +32,17 @@
                       Padding="10">
 
                         <!--Head-->
-                        <Frame Padding="0 , 0" Margin="0, 0, 0, -2" BorderColor="Purple" CornerRadius="4" Grid.Row="0" Grid.Column="0">
-                            <Image Source="{Binding Head.Icon}"
+                        
+                        <Frame Padding="0 , 0" Margin="0, 0, 0, -2" BorderColor="Purple" CornerRadius="4" Grid.Row="0" Grid.Column="0" >
+                            
+                            <Image x:Name="head" Source="{Binding Head.Icon}"
                                    HeightRequest="50"
                                    WidthRequest="50"
+                                   
                            Aspect="AspectFit" ></Image>
                         </Frame>
-                        <Grid Grid.Column="1" RowDefinitions="2*, *" Padding="5" RowSpacing="-2" >
+                        
+                        <Grid Grid.Column="1" RowDefinitions="2*, *" Padding="5" RowSpacing="-2">
 
                             <Label Text="{Binding Head.ItemName}"
                            Grid.Row="0"
@@ -47,6 +57,7 @@
                            TextColor="#cf4dce"
                            HorizontalOptions="Start"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" Text="{Binding Head.wowheadId}" CommandParameter="{Binding Head.wowheadId}" x:Name="HeadButton" Clicked="HeadButton_Clicked" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="StartAndExpand"></Button>
 
                         <!--Neck-->
                         <Frame Padding="0 , 0" Margin="0, 0, 0, -1" BorderColor="Purple" CornerRadius="4" Grid.Row="1" Grid.Column="0">
@@ -69,10 +80,12 @@
                                    TextColor="#cf4dce"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Neck.wowheadId}" x:Name="NeckButton" Clicked="NeckButton_Clicked"  Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="StartAndExpand"></Button>
 
                         <!--Shoulder-->
                         <Frame Padding="0 , 0" Margin="0, 0, 0, -1" BorderColor="Purple" CornerRadius="4" Grid.Row="2" Grid.Column="0">
                             <Image Source="{Binding Shoulder.Icon}"
+                                   ToolTipProperties.Text="{Binding Shoulder.wowheadId}"
                                    HeightRequest="50"
                                    WidthRequest="50"
                            Aspect="AspectFit"></Image>
@@ -91,6 +104,7 @@
                                    TextColor="#cf4dce"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Shoulder.wowheadId}" x:Name="ShoulderButton" Clicked="ShoulderButton_Clicked"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="StartAndExpand"></Button>
 
                         <!--Back-->
                         <Frame Padding="0 , 0" Margin="0, 0, 0, 0" BorderColor="Purple" CornerRadius="4" Grid.Row="3" Grid.Column="0">
@@ -113,6 +127,7 @@
                                    TextColor="#cf4dce"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Back.wowheadId}" x:Name="BackButton" Clicked="BackButton_Clicked"  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="StartAndExpand"></Button>
 
                         <!--Chest-->
                         <Frame Padding="0 , 0" Margin="0, 0, 0, 0" BorderColor="Purple" CornerRadius="4" Grid.Row="4" Grid.Column="0">
@@ -135,6 +150,7 @@
                                    TextColor="#cf4dce"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Chest.wowheadId}" x:Name="ChestButton" Clicked="ChestButton_Clicked"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="StartAndExpand"></Button>
 
                         <!--Shirt-->
                         <Frame Padding="0 , 0" Margin="0, 0, 0, 0" BorderColor="Purple" CornerRadius="4" Grid.Row="5" Grid.Column="0">
@@ -157,6 +173,7 @@
                            TextColor="#cf4dce"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Shirt.wowheadId}" x:Name="ShirtButton" Clicked="ShirtButton_Clicked"  Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="StartAndExpand"></Button>
 
                         <!--Tabard-->
                         <Frame Padding="0 , 0" Margin="0, 0, 0, 0" BorderColor="Purple" CornerRadius="4" Grid.Row="6" Grid.Column="0">
@@ -179,6 +196,7 @@
                            TextColor="#cf4dce"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Tabard.wowheadId}" x:Name="TabardButton" Clicked="TabardButton_Clicked"  Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="StartAndExpand"></Button>
 
                         <!--Wrist-->
                         <Frame Padding="0 , 0" Margin="0, 0, 0, 0" BorderColor="Purple" CornerRadius="4" Grid.Row="7" Grid.Column="0">
@@ -201,6 +219,7 @@
                            TextColor="#cf4dce"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Wrist.wowheadId}" x:Name="WristButton" Clicked="WristButton_Clicked"  Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="StartAndExpand"></Button>
 
 
 
@@ -216,7 +235,7 @@
                           ColumnSpacing="10"
                           Margin="5">
                         
-                            <Grid Grid.Column="0" Grid.Row="7" RowDefinitions="*, *" Padding="5" RowSpacing="-2">
+                            <Grid Grid.Column="0" Grid.Row="7" RowDefinitions="2*, *" Padding="5" RowSpacing="-2">
 
                                 <Label Text="{Binding Mainhand.ItemName}"
                            Grid.Row="0"
@@ -231,10 +250,11 @@
                            TextColor="#cf4dce"
                            FontSize="12"></Label>
                             </Grid>
+                        
 
 
 
-                            <Grid Grid.Column="2" Grid.Row="7" RowDefinitions="2*, *" Padding="5" RowSpacing="-2">
+                        <Grid Grid.Column="2" Grid.Row="7" RowDefinitions="2*, *" Padding="5" RowSpacing="-2">
 
                                 <Label Text="{Binding Offhand.ItemName}"
                                    
@@ -250,6 +270,7 @@
                            TextColor="#cf4dce"
                            FontSize="12"></Label>
                             </Grid>
+                        
 
 
                         <Grid Grid.Column="1" Grid.Row="7" ColumnDefinitions="*,*" ColumnSpacing="2">
@@ -261,8 +282,9 @@
                                    
                            Aspect="AspectFit"></Image>
                         </Frame>
+                           
 
-                        <!--OffHand-->
+                            <!--OffHand-->
                         <Frame Padding="0, 0" Margin="8, 10, 14, 13" CornerRadius="4" BorderColor="Purple"  Grid.Column="1">
                             <Image Source="{Binding Offhand.Icon}"
                                    HeightRequest="50"                                   
@@ -271,7 +293,9 @@
                            Aspect="AspectFit"></Image>
                         </Frame>
                         </Grid>
+                        <Button CommandParameter="{Binding Offhand.wowheadId}" x:Name="OffhandButton" Clicked="OffhandButton_Clicked"  Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="300" HorizontalOptions="Center" BorderColor="Transparent"></Button>
                         <Image Source="{Binding BackgroundImage}" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="1000" WidthRequest="1000" Grid.ColumnSpan="3" Grid.RowSpan="8"></Image>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Mainhand.wowheadId}" x:Name="MainhandButton" Clicked="MainhandButton_Clicked"  Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="300" HorizontalOptions="Center"></Button>
                     </Grid>
                 </VerticalStackLayout>
 
@@ -306,6 +330,7 @@
                            HorizontalOptions="End"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Hands.wowheadId}" x:Name="HandButton" Clicked="HandButton_Clicked"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="EndAndExpand"></Button>
 
                         <!--Waist-->
                         <Frame Padding="0 , 0" Margin="0, -2, -7, 0" BorderColor="Purple" CornerRadius="4" Grid.Row="1" Grid.Column="1">
@@ -330,6 +355,7 @@
                                    TextColor="#cf4dce"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Waist.wowheadId}" x:Name="WaistButton" Clicked="WaistButton_Clicked"  Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="EndAndExpand"></Button>
 
                         <!--Legs-->
                         <Frame Padding="0 , 0" Margin="0, -2, -7, 0" BorderColor="Purple" CornerRadius="4" Grid.Row="2" Grid.Column="1">
@@ -354,6 +380,7 @@
                            HorizontalOptions="End"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Legs.wowheadId}" x:Name="LegsButton" Clicked="LegsButton_Clicked"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="EndAndExpand"></Button>
 
                         <!--Feet-->
                         <Frame Padding="0 , 0" Margin="0, -2, -7, 0" BorderColor="Purple" CornerRadius="4" Grid.Row="3" Grid.Column="1">
@@ -378,6 +405,7 @@
                            HorizontalOptions="End"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Feet.wowheadId}" x:Name="FeetButton" Clicked="FeetButton_Clicked"  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="EndAndExpand"></Button>
 
                         <!--Ring1-->
                         <Frame Padding="0 , 0" Margin="0, -2, -7, 0" BorderColor="Purple" CornerRadius="4" Grid.Row="4" Grid.Column="1">
@@ -402,6 +430,7 @@
                            HorizontalOptions="End"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Ring1.wowheadId}" x:Name="Ring1Button" Clicked="Ring1Button_Clicked"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="EndAndExpand"></Button>
 
                         <!--Ring2-->
                         <Frame Padding="0 , 0" Margin="0, -2, -7, 0" BorderColor="Purple" CornerRadius="4" Grid.Row="5" Grid.Column="1">
@@ -426,6 +455,7 @@
                            HorizontalOptions="End"
                            FontSize="12"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Ring2.wowheadId}" x:Name="Ring2Button" Clicked="Ring2Button_Clicked"  Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="EndAndExpand"></Button>
 
                         <!--Trinket1-->
                         <Frame Padding="0 , 0" Margin="0, -2, -7, 0" BorderColor="Purple" CornerRadius="4" Grid.Row="6" Grid.Column="1">
@@ -450,6 +480,7 @@
                                    TextColor="#cf4dce"
                            HorizontalOptions="End"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Trinket1.wowheadId}" x:Name="Trinket1Button" Clicked="Trinket1Button_Clicked"  Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="EndAndExpand"></Button>
 
                         <!--Trinket2-->
                         <Frame Padding="0 , 0" Margin="0, -2, -7, 0" BorderColor="Purple" CornerRadius="4" Grid.Row="7" Grid.Column="1">
@@ -474,6 +505,7 @@
                            FontSize="12"
                            HorizontalOptions="End"></Label>
                         </Grid>
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Trinket2.wowheadId}" x:Name="Trinket2Button" Clicked="Trinket2Button_Clicked"  Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="250" HorizontalOptions="EndAndExpand"></Button>
 
 
 

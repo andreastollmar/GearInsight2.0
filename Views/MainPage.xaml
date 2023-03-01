@@ -20,12 +20,19 @@
 
             <Button
                 x:Name="FindCharacter"
-                Text="Click me"
+                Text="Search Character"
                 
                 
                 Clicked="FindCharacter_Clicked"
                 
                 HorizontalOptions="Center" />
+            <Button
+                x:Name="CounterClicked"                
+                Clicked="CounterClicked_Clicked"
+                HorizontalOptions="Center"
+                Text="Popup knapp"
+                
+                ></Button>
 
         </VerticalStackLayout>
     </ScrollView>
