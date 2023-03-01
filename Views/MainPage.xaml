@@ -46,7 +46,7 @@
         </VerticalStackLayout>
         <AbsoluteLayout Grid.Row="3" >
         <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
-                AbsoluteLayout.LayoutBounds="890, -30"
+                AbsoluteLayout.LayoutBounds="760, -30"
                 HeightRequest="50"
                 x:Name="FindCharacter"
                 Text="Search Character"

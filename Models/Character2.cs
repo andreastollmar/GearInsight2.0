@@ -32,7 +32,7 @@ namespace GearInsight.Models
             c.CurrentGuild = profile.Value.Guild.Name;
             c.ActiveSpec = profile.Value.ActiveSpec.Name;
             c.PlayedClass = profile.Value.CharacterClass.Name;
-            c.BackgroundImage = charMedia.Value.Assets[3].Value.AbsoluteUri;
+            c.CharacterImage = charMedia.Value.Assets[3].Value.AbsoluteUri;
             c.Power.Rating = stats.Value.Power;
 
 
@@ -42,6 +42,8 @@ namespace GearInsight.Models
                 if (c.PlayedClass == "Warrior" || c.PlayedClass == "Death Knight" || c.ActiveSpec == "Retribution" || c.ActiveSpec == "Protection")
                 {
                     c.Strength.Rating = stats.Value.Strength.Effective;
+
+                    c.BackgroundImage = "lastfinalwarriorbg.png";
 
                     c.MeleeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeCrit.ToString());
                     c.MeleeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeCrit.ToString());
@@ -53,6 +55,8 @@ namespace GearInsight.Models
                 {
                     c.Agility.Rating = stats.Value.Agility.Effective;
 
+                    c.BackgroundImage = "dhbg.png";
+
                     c.MeleeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeCrit.ToString());
                     c.MeleeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeCrit.ToString());
 
@@ -63,6 +67,8 @@ namespace GearInsight.Models
                 {
                     c.Agility.Rating = stats.Value.Agility.Effective;
 
+                    c.BackgroundImage = "roguebg.png";
+
                     c.RangeHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.RangedHaste.ToString());
                     c.RangeHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.RangedHaste.ToString());
 
@@ -72,8 +78,9 @@ namespace GearInsight.Models
                 }
                 else if (c.PlayedClass == "Mage" || c.PlayedClass == "Warlock" || c.PlayedClass == "Priest" || c.PlayedClass == "Evoker" || c.ActiveSpec == "Mistweaver" || c.PlayedClass == "Shaman" || c.ActiveSpec == "Balance" || c.ActiveSpec == "Restoration" || c.ActiveSpec == "Holy")
                 {
-
                     c.Intellect.Rating = stats.Value.Intellect.Effective;
+
+                    c.BackgroundImage = "roguebg.png";
 
                     c.SpellHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.SpellHaste.ToString());
                     c.SpellHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.SpellHaste.ToString());

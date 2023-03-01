@@ -21,6 +21,7 @@ namespace GearInsight.Models
         public int AchievementPoints { get; set; }
         public string MPlusRating { get; set; }
         public string BackgroundImage { get; set; }
+        public string CharacterImage { get; set; }
 
 
         public Head Head { get; set; } = new Head();

@@ -13,8 +13,8 @@ public partial class App : Application
     {
         var window = base.CreateWindow(activationState);
 
-		const int newWidth = 1440;
-		const int newHeight = 900;
+		const int newWidth = 1680;
+		const int newHeight = 1050;
 
 		window.MinimumHeight = newHeight;
 		window.MaximumHeight = newHeight;

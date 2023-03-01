@@ -4,28 +4,38 @@
              xmlns:model="clr-namespace:GearInsight.Models"            
              x:Class="GearInsight.Views.CharacterPage"
              Title="CharacterPage"             
-             BackgroundImageSource="warrior.jpg">
+             BackgroundImageSource="{Binding BackgroundImage}" 
+             Shell.NavBarIsVisible="False"
+             >
+    <Shell.BackButtonBehavior>
+    <BackButtonBehavior IsEnabled="False" IsVisible="False"></BackButtonBehavior>
+    </Shell.BackButtonBehavior>
 
 
-    <FlexLayout Direction="Column">
 
-        <Label x:Name="CharacterName" Text="{Binding CharacterName}" TextColor="Purple" FontSize="48" HorizontalTextAlignment="Center" Padding="10"></Label>
-        <FlexLayout FlexLayout.Grow="1" Direction="Row">
-            <Grid ColumnDefinitions="200, *, 2*, *, 200">
+
+    <AbsoluteLayout >
+
+        <Label AbsoluteLayout.LayoutBounds="620, 40" x:Name="CharacterName" Text="{Binding CharacterName}" TextColor="Purple" FontSize="48" HorizontalTextAlignment="Center" Padding="10"></Label>
+        
+            
                 <Grid ColumnDefinitions="*,*" RowDefinitions="*, *, *, *, *">
 
                     <Button Grid.Row="5" Grid.Column="1" HeightRequest="50" Text="Go back" x:Name="GoBackToMainPage" Clicked="GoBackToMainPage_Clicked"></Button>
 
                     
                 </Grid>
-                
-                <VerticalStackLayout Grid.Column="1"
+
+
+        <Image  AbsoluteLayout.LayoutBounds="440, 190, 800, 600 " Source="{Binding CharacterImage}"  Aspect="AspectFill" ></Image>
+
+        <VerticalStackLayout AbsoluteLayout.LayoutBounds="320, 130"
                                      
                 
                 >
 
 
-                    <Grid Grid.Column="1" RowDefinitions="*, *, *, *, *, *, *, *"
+                    <Grid RowDefinitions="*, *, *, *, *, *, *, *"
                       ColumnDefinitions="*, 300"
                       RowSpacing="20"
                       Margin="5"
@@ -228,78 +238,9 @@
 
                 </VerticalStackLayout>
 
-                <VerticalStackLayout FlexLayout.Grow="1" Grid.Column="2">
-                    <Grid ColumnDefinitions="2*, *, 2*"
-                          RowDefinitions="75, 75, 75, 75, 75, 75, 75, 75"
-                          RowSpacing="20"
-                          ColumnSpacing="10"
-                          Margin="5">
-                        
-                            <Grid Grid.Column="0" Grid.Row="7" RowDefinitions="2*, *" Padding="5" RowSpacing="-2">
+                
 
-                                <Label Text="{Binding Mainhand.ItemName}"
-                           Grid.Row="0"
-                           FontSize="16"
-                                       HorizontalOptions="End"
-                           TextColor="#cf4dce"
-                           FontAttributes="Bold"></Label>
-
-                                <Label Text="Ilvl och enchantments"                         
-                           Grid.Row="1"
-                                       HorizontalOptions="End"
-                           TextColor="#cf4dce"
-                           FontSize="12"></Label>
-                            </Grid>
-                        
-
-
-
-                        <Grid Grid.Column="2" Grid.Row="7" RowDefinitions="2*, *" Padding="5" RowSpacing="-2">
-
-                                <Label Text="{Binding Offhand.ItemName}"
-                                   
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="#cf4dce"
-                           HorizontalOptions="Start"
-                           FontAttributes="Bold"></Label>
-
-                                <Label Text="Ilvl och enchantments" 
-                                   HorizontalOptions="Start"
-                           Grid.Row="1"
-                           TextColor="#cf4dce"
-                           FontSize="12"></Label>
-                            </Grid>
-                        
-
-
-                        <Grid Grid.Column="1" Grid.Row="7" ColumnDefinitions="*,*" ColumnSpacing="2">
-                        <!--MainHand-->
-                        <Frame Padding="0 , 0" Margin="8, 10, 14, 13" BorderColor="Purple" CornerRadius="4"  Grid.Column="0" >
-                            <Image Source="{Binding Mainhand.Icon}"
-                                   HeightRequest="50"
-                                   WidthRequest="50"
-                                   
-                           Aspect="AspectFit"></Image>
-                        </Frame>
-                           
-
-                            <!--OffHand-->
-                        <Frame Padding="0, 0" Margin="8, 10, 14, 13" CornerRadius="4" BorderColor="Purple"  Grid.Column="1">
-                            <Image Source="{Binding Offhand.Icon}"
-                                   HeightRequest="50"                                   
-                                   WidthRequest="50"
-                                   ToolTipProperties.Text="{Binding Offhand.wowheadId}"
-                           Aspect="AspectFit"></Image>
-                        </Frame>
-                        </Grid>
-                        <Button CommandParameter="{Binding Offhand.wowheadId}" x:Name="OffhandButton" Clicked="OffhandButton_Clicked"  Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="300" HorizontalOptions="Center" BorderColor="Transparent"></Button>
-                        <Image Source="{Binding BackgroundImage}" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="1000" WidthRequest="1000" Grid.ColumnSpan="3" Grid.RowSpan="8"></Image>
-                        <Button BorderColor="Transparent" CommandParameter="{Binding Mainhand.wowheadId}" x:Name="MainhandButton" Clicked="MainhandButton_Clicked"  Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="300" HorizontalOptions="Center"></Button>
-                    </Grid>
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Column="3" HorizontalOptions="End"
+                <VerticalStackLayout AbsoluteLayout.LayoutBounds="970, 130" HorizontalOptions="End"
                 >
 
                     <Grid RowDefinitions=" *, *, *, *, *, *, *, *"
@@ -513,8 +454,86 @@
 
 
                 </VerticalStackLayout>
-            </Grid>
-        </FlexLayout>
-        <Label BackgroundColor="Transparent"></Label>
-    </FlexLayout>
+
+
+        
+       
+
+
+        <VerticalStackLayout AbsoluteLayout.LayoutBounds="490, 700, 700, 700">
+                    <Grid ColumnDefinitions="3*, 50, 50, 3*"
+                          RowDefinitions="50"                        
+                          ColumnSpacing="10"
+                          Margin="0"
+                          Padding="0"
+                          
+                          >
+
+                        <Grid Grid.Column="0"  RowDefinitions="2*, *" Padding="5" RowSpacing="-2">
+
+                            <Label Text="{Binding Mainhand.ItemName}"
+                           Grid.Row="0"
+                           FontSize="16"
+                           HorizontalOptions="End"
+                           TextColor="#cf4dce"
+                           FontAttributes="Bold"
+                                   ></Label>
+
+                            <Label Text="Ilvl och enchantments"                         
+                           Grid.Row="1"
+                           HorizontalOptions="End"
+                           TextColor="#cf4dce"
+                           FontSize="12"></Label>
+                        </Grid>
+
+
+
+
+                        <Grid Grid.Column="3" RowDefinitions="2*, *"  RowSpacing="-2">
+
+                            <Label Text="{Binding Offhand.ItemName}"
+                                   
+                           Grid.Row="0"
+                           FontSize="16"
+                           TextColor="#cf4dce"
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"></Label>
+
+                            <Label Text="Ilvl och enchantments" 
+                                   HorizontalOptions="Start"
+                           Grid.Row="1"
+                           TextColor="#cf4dce"
+                           FontSize="12"></Label>
+                        </Grid>
+
+
+
+                        
+                            <!--MainHand-->
+                            <Frame Grid.Column="1" Padding="0 , 0" Margin="0, 0, 0, 0" BorderColor="Purple" CornerRadius="4"  >
+                                <Image Source="{Binding Mainhand.Icon}"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   
+                           Aspect="AspectFit"></Image>
+                            </Frame>
+
+
+                            <!--OffHand-->
+                            <Frame Grid.Column="2" Padding="0, 0" Margin="0, 0, 0, 0" CornerRadius="4" BorderColor="Purple" >
+                                <Image Source="{Binding Offhand.Icon}"
+                                   HeightRequest="50"                                   
+                                   WidthRequest="50"
+                                   ToolTipProperties.Text="{Binding Offhand.wowheadId}"
+                           Aspect="AspectFit"></Image>
+                            </Frame>
+                        </Grid>
+                        <Button CommandParameter="{Binding Offhand.wowheadId}" x:Name="OffhandButton" Clicked="OffhandButton_Clicked"  Grid.Column="2"  Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="300" HorizontalOptions="Center" BorderColor="Transparent"></Button>
+                        
+                        <Button BorderColor="Transparent" CommandParameter="{Binding Mainhand.wowheadId}" x:Name="MainhandButton" Clicked="MainhandButton_Clicked"  Grid.Column="1" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="300" HorizontalOptions="Center"></Button>
+                    
+                </VerticalStackLayout>
+        
+
+    </AbsoluteLayout>
 </ContentPage>

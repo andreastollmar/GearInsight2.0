@@ -12,8 +12,7 @@ public partial class CharacterPage : ContentPage
 	public CharacterPage()
 	{
 		InitializeComponent();
-
-	}
+    }
     
     private void HeadButton_Clicked(object sender, EventArgs e)
     {
