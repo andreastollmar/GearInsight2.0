@@ -18,7 +18,7 @@ namespace GearInsight.Models
     {
         public Head()
         {
-            Icon = "emptyhead.png";
+            Icon = "empty_head.png";
             ItemName = "Head";
         }
     }
@@ -26,7 +26,7 @@ namespace GearInsight.Models
     {
         public Neck()
         {
-            Icon = "emptyneck.png";
+            Icon = "empty_neck.png";
             ItemName = "Neck";
         }
     }
@@ -34,7 +34,7 @@ namespace GearInsight.Models
     {
         public Shoulder()
         {
-            Icon = "emptyshoulder.png";
+            Icon = "empty_shoulder.png";
             ItemName = "Shoulder";
         }
     }
@@ -42,7 +42,7 @@ namespace GearInsight.Models
     {
         public Chest()
         {
-            Icon = "emptychest.png";
+            Icon = "empty_chest.png";
             ItemName = "Chest";
         }
     }
@@ -50,7 +50,7 @@ namespace GearInsight.Models
     {
         public Waist()
         {
-            Icon = "emptywaist.png";
+            Icon = "empty_waist.png";
             ItemName = "Waist";
         }
     }
@@ -58,7 +58,7 @@ namespace GearInsight.Models
     {
         public Legs()
         {
-            Icon = "emptylegs.png";
+            Icon = "empty_legs.png";
             ItemName = "Legs";
         }
     }
@@ -66,7 +66,7 @@ namespace GearInsight.Models
     {
         public Feet()
         {
-            Icon = "emptyfeet.png";
+            Icon = "empty_feet.png";
             ItemName = "Feet";
         }
     }
@@ -74,7 +74,7 @@ namespace GearInsight.Models
     {
         public Wrist()
         {
-            Icon = "emptywrist.png";
+            Icon = "empty_wrist.png";
             ItemName = "Wrist";
         }
     }
@@ -82,7 +82,7 @@ namespace GearInsight.Models
     {
         public Hands()
         {
-            Icon = "emptyhands.png";
+            Icon = "empty_hands.png";
             ItemName = "Hands";
         }
     }
@@ -90,7 +90,7 @@ namespace GearInsight.Models
     {
         public Ring1()
         {
-            Icon = "emptyring.png";
+            Icon = "empty_ring.png";
             ItemName = "Ring";
         }
     }
@@ -98,7 +98,7 @@ namespace GearInsight.Models
     {
         public Ring2()
         {
-            Icon = "emptyring.png";
+            Icon = "empty_ring.png";
             ItemName = "Ring";
         }
     }
@@ -106,7 +106,7 @@ namespace GearInsight.Models
     {
         public Trinket1()
         {
-            Icon = "emptytrinket.png";
+            Icon = "empty_trinket.png";
             ItemName = "Trinket";
         }
     }
@@ -114,7 +114,7 @@ namespace GearInsight.Models
     {
         public Trinket2()
         {
-            Icon = "emptytrinket.png";
+            Icon = "empty_trinket.png";
             ItemName = "Trinket";
         }
     }
@@ -122,7 +122,7 @@ namespace GearInsight.Models
     {
         public Back()
         {
-            Icon = "emptychest.png";
+            Icon = "empty_chest.png";
             ItemName = "Back";
         }
     }
@@ -130,7 +130,7 @@ namespace GearInsight.Models
     {
         public Mainhand()
         {
-            Icon = "emptymainhand.png";
+            Icon = "empty_mainhand.png";
             ItemName = "Mainhand";
         }
     }
@@ -138,7 +138,7 @@ namespace GearInsight.Models
     {
         public Offhand()
         {
-            Icon = "emptyoffhand.png";
+            Icon = "empty_offhand.png";
             ItemName = "Offhand";
         }
     }
@@ -146,7 +146,7 @@ namespace GearInsight.Models
     {
         public Tabard()
         {
-            Icon = "emptytabard.png";
+            Icon = "empty_tabard.png";
             ItemName = "Tabard";
         }
     }
@@ -154,7 +154,7 @@ namespace GearInsight.Models
     {
         public Shirt()
         {
-            Icon = "emptyshirt.png";
+            Icon = "empty_shirt.png";
             ItemName = "Shirt";
         }
     }

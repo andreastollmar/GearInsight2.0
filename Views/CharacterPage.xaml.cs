@@ -117,4 +117,9 @@ public partial class CharacterPage : ContentPage
         await Navigation.PopAsync();
         
     }
+
+    private void RefreshCharacterPage_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

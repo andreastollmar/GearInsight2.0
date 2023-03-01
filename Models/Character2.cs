@@ -43,7 +43,7 @@ namespace GearInsight.Models
                 {
                     c.Strength.Rating = stats.Value.Strength.Effective;
 
-                    c.BackgroundImage = "lastfinalwarriorbg.png";
+                    c.BackgroundImage = "bg_1.png";
 
                     c.MeleeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeCrit.ToString());
                     c.MeleeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeCrit.ToString());
@@ -55,7 +55,7 @@ namespace GearInsight.Models
                 {
                     c.Agility.Rating = stats.Value.Agility.Effective;
 
-                    c.BackgroundImage = "dhbg.png";
+                    c.BackgroundImage = "bg_2.png";
 
                     c.MeleeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeCrit.ToString());
                     c.MeleeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeCrit.ToString());
@@ -67,7 +67,7 @@ namespace GearInsight.Models
                 {
                     c.Agility.Rating = stats.Value.Agility.Effective;
 
-                    c.BackgroundImage = "roguebg.png";
+                    c.BackgroundImage = "bg_3.png";
 
                     c.RangeHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.RangedHaste.ToString());
                     c.RangeHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.RangedHaste.ToString());
@@ -80,7 +80,7 @@ namespace GearInsight.Models
                 {
                     c.Intellect.Rating = stats.Value.Intellect.Effective;
 
-                    c.BackgroundImage = "roguebg.png";
+                    c.BackgroundImage = "bg_3.png";
 
                     c.SpellHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.SpellHaste.ToString());
                     c.SpellHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.SpellHaste.ToString());

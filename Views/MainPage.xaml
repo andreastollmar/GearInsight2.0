@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GearInsight.MainPage"
-             BackgroundImageSource="mainpagebg2.jpg"             
+             BackgroundImageSource="bg_mainpagev1.jpg"             
              Title=""
              >
 

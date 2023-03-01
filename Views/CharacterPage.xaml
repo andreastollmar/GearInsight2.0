@@ -19,20 +19,18 @@
         <Label AbsoluteLayout.LayoutBounds="620, 40" x:Name="CharacterName" Text="{Binding CharacterName}" TextColor="Purple" FontSize="48" HorizontalTextAlignment="Center" Padding="10"></Label>
         
             
-                <Grid ColumnDefinitions="*,*" RowDefinitions="*, *, *, *, *">
+        <Grid ColumnDefinitions="*,*" RowDefinitions="*, *, *, *, *">
 
-                    <Button Grid.Row="5" Grid.Column="1" HeightRequest="50" Text="Go back" x:Name="GoBackToMainPage" Clicked="GoBackToMainPage_Clicked"></Button>
+            <Button Grid.Row="5" Grid.Column="1" HeightRequest="50" Text="Go back" x:Name="GoBackToMainPage" Clicked="GoBackToMainPage_Clicked"></Button>
+            <!--Ny knapp-->
+            <!--<Button Grid.Row="5" Grid.Column="4" HeightRequest="50" Text="Refresh" x:Name="RefreshCharacterPage" Clicked="RefreshCharacterPage_Clicked"></Button>--> 
 
-                    
-                </Grid>
+        </Grid>
 
 
         <Image  AbsoluteLayout.LayoutBounds="440, 190, 800, 600 " Source="{Binding CharacterImage}"  Aspect="AspectFill" ></Image>
 
-        <VerticalStackLayout AbsoluteLayout.LayoutBounds="320, 130"
-                                     
-                
-                >
+        <VerticalStackLayout AbsoluteLayout.LayoutBounds="320, 130" >
 
 
                     <Grid RowDefinitions="*, *, *, *, *, *, *, *"

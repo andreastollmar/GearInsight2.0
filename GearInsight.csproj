@@ -50,7 +50,7 @@
 
 	<ItemGroup>
 	  <PackageReference Include="ArgentPonyWarcraftClient" Version="7.0.38" />
-	  <PackageReference Include="CommunityToolkit.Maui" Version="4.0.0" />
+	  <PackageReference Include="CommunityToolkit.Maui" Version="5.0.0" />
 	  <PackageReference Include="MongoDB.Driver" Version="2.19.0" />
 	</ItemGroup>
 
