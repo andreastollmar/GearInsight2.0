@@ -60,7 +60,7 @@ namespace GearInsight.Models
 
         public Character(string characterName, string realm)
         {
-            CharacterName = characterName;
+            CharacterName = Helpers.FirstLetterCapital(characterName);
             Realm = realm;
             Id = new Guid();
         }

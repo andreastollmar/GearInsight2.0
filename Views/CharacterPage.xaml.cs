@@ -12,6 +12,7 @@ public partial class CharacterPage : ContentPage
 	public CharacterPage()
 	{
 		InitializeComponent();
+
 	}
     
     private void HeadButton_Clicked(object sender, EventArgs e)
@@ -109,5 +110,12 @@ public partial class CharacterPage : ContentPage
     private void BackButton_Clicked(object sender, EventArgs e)
     {
 
+    }
+
+    private async void GoBackToMainPage_Clicked(object sender, EventArgs e)
+    {
+        
+        await Navigation.PopAsync();
+        
     }
 }

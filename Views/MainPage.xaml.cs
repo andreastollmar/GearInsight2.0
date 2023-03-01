@@ -16,8 +16,8 @@ public partial class MainPage : ContentPage
 
 	private async void FindCharacter_Clicked(object sender, EventArgs e)
 	{
-		var name = Charactername.Text;
-		var realm = Realm.Text;
+		var name = Charactername.Text.ToLower();
+		var realm = Realm.Text.ToLower();
 		Character character = await Mongo.CreateCharacter(name, realm);
 		if (character != null)
 		{
@@ -27,20 +27,6 @@ public partial class MainPage : ContentPage
 		}
 	}
 
-    private void CounterClicked_Clicked(object sender, EventArgs e)
-    {
-		count++;
-
-		if (count == 1)
-		{
-			CounterClicked.Text = $"Clicked {count} time";
-		}
-		else
-		{
-			CounterClicked.Text = $"Clicked {count} times";
-		}
-		this.ShowPopup(new PopupPage(32));
-
-    }
+    
 }
 

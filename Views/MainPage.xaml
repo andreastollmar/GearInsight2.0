@@ -1,40 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GearInsight.MainPage">
+             x:Class="GearInsight.MainPage"
+             BackgroundImageSource="mainpagebg2.jpg"             
+             Title=""
+             >
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
 
+
+
+
+    <Grid RowDefinitions="*, *, *" ColumnDefinitions="*, *, *, *">
+        <AbsoluteLayout Grid.Row="0" Grid.Column="0" >
+        <Image AbsoluteLayout.LayoutBounds="50, 50, 200, 200" Source="logo_horde.png"  ></Image>
+        </AbsoluteLayout>
+        <VerticalStackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+            Spacing="15"
+            Padding="50"
+            VerticalOptions="End">
+            
             <Entry x:Name="Charactername"
-                   Placeholder="Skriv din karaktärs namn"
-                   HorizontalOptions="Center" ></Entry>
+                   Placeholder="Enter character name"
+                   HorizontalOptions="Center" 
+                   WidthRequest="175"
+                   BackgroundColor="White"
+                   PlaceholderColor="#9d9d9d"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#1a1716"
+                   ></Entry>
             
             <Entry x:Name="Realm"
-                   Placeholder="Skriv din server"
-                   
+                   Placeholder="Enter realm"
+                   PlaceholderColor="#9d9d9d"
+                   WidthRequest="250"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="White"
+                   TextColor="#1a1716"
                    HorizontalOptions="Center" ></Entry>
+            
+            
+            
 
-            <Button
+        </VerticalStackLayout>
+        <AbsoluteLayout Grid.Row="3" >
+        <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
+                AbsoluteLayout.LayoutBounds="890, -30"
+                HeightRequest="50"
                 x:Name="FindCharacter"
                 Text="Search Character"
+                BackgroundColor="#342f2d"
+                BorderColor="#1a1a1a"                
+                BorderWidth="2"
+                CornerRadius="5"
                 
                 
                 Clicked="FindCharacter_Clicked"
                 
                 HorizontalOptions="Center" />
-            <Button
-                x:Name="CounterClicked"                
-                Clicked="CounterClicked_Clicked"
-                HorizontalOptions="Center"
-                Text="Popup knapp"
-                
-                ></Button>
-
-        </VerticalStackLayout>
-    </ScrollView>
+        </AbsoluteLayout>
+    </Grid>
 
 </ContentPage>

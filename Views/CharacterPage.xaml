@@ -9,12 +9,12 @@
 
     <FlexLayout Direction="Column">
 
-        <Label Text="{Binding CharacterName}" TextColor="Purple" FontSize="48" HorizontalTextAlignment="Center" Padding="10"></Label>
+        <Label x:Name="CharacterName" Text="{Binding CharacterName}" TextColor="Purple" FontSize="48" HorizontalTextAlignment="Center" Padding="10"></Label>
         <FlexLayout FlexLayout.Grow="1" Direction="Row">
             <Grid ColumnDefinitions="200, *, 2*, *, 200">
                 <Grid ColumnDefinitions="*,*" RowDefinitions="*, *, *, *, *">
-                
-                    
+
+                    <Button Grid.Row="5" Grid.Column="1" HeightRequest="50" Text="Go back" x:Name="GoBackToMainPage" Clicked="GoBackToMainPage_Clicked"></Button>
 
                     
                 </Grid>

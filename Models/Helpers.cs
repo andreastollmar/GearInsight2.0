@@ -52,6 +52,13 @@ namespace GearInsight.Models
                 return null;
             }
         }
+        public static string FirstLetterCapital(string name)
+        {
+            var value = name.Substring(0, 1);
+            value = value.ToUpper();
+            value = value + name.Substring(1, name.Length - 1);
+            return value;
+        }
         public static int ExtractRatingFromStats(string input)
         {
             string pattern = @"\bRating\s*=\s*(\d+)";
